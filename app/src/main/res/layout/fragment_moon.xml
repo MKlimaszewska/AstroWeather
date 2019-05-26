@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#042860"
+    tools:context=".MoonFragment">
+
+    <ImageView
+        android:id="@+id/imageMoon"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:src="@drawable/moon" />
+    <TextView
+        android:id="@+id/CzasMoon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textAlignment="center"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:textColor="@color/textMoon"/>
+
+    <TextView
+        android:id="@+id/WschodMoon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/Wschód"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        android:textColor="@color/textMoon"/>
+    <TextView
+        android:id="@+id/textwschod"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/textMoon"/>
+
+    <TextView
+        android:id="@+id/Zachod"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/Zachód"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        android:textColor="@color/textMoon"/>
+    <TextView
+        android:id="@+id/textZachodMoon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/textMoon"/>
+
+
+
+    <TextView
+        android:id="@+id/NajblizszyNowKsiezyca"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/NajblizszyNow"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        android:textColor="@color/textMoon"/>
+
+    <TextView
+        android:id="@+id/textNajblizszyNowKsiezyca"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/textMoon"/>
+
+    <TextView
+        android:id="@+id/NajblizszaPelniaKsiezyca"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/NajblizszaPelnia"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        android:textColor="@color/textMoon"/>
+
+    <TextView
+        android:id="@+id/textNajblizszaPelniaKsiezyca"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/textMoon"/>
+
+
+
+    <TextView
+        android:id="@+id/FazaKsiezyca"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/FazaKsiezyca"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        android:textColor="@color/textMoon"/>
+    <TextView
+        android:id="@+id/textFazaKsiezyca"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/textMoon"/>
+
+
+    <TextView
+        android:id="@+id/DzienMiesiaca"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/DzienMiesiaca"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        android:textColor="@color/textMoon"/>
+    <TextView
+        android:id="@+id/textDzienMiesiaca"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/textMoon"/>
+
+
+</LinearLayout>

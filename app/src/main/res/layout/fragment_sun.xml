@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#ffb400"
+    tools:context=".SunFragment">
+
+    <ImageView
+        android:id="@+id/imageMoon"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:src="@drawable/sun" />
+    <TextView
+        android:id="@+id/CzasSun"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:textColor="@color/textSun"/>
+
+    <TextView
+        android:id="@+id/Wschod"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/Wschód"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        android:textColor="@color/textSun"/>
+
+    <TextView
+        android:id="@+id/textWschod"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/textSun"/>
+
+
+
+    <TextView
+        android:id="@+id/ZachodSun"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/Zachód"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        android:textColor="@color/textSun"/>
+
+    <TextView
+        android:id="@+id/textZachodSun"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/textSun"/>
+
+
+    <TextView
+        android:id="@+id/ŚwitCyw"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/ŚwitCyw"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        android:textColor="@color/textSun"/>
+    <TextView
+        android:id="@+id/textŚwitCyw"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/textSun"/>
+
+
+    <TextView
+        android:id="@+id/ZmierzchCyw"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/ZmierzchCyw"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        android:textColor="@color/textSun"/>
+    <TextView
+        android:id="@+id/textZmierzchCyw"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/textSun"/>
+
+
+
+</LinearLayout>

@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffb400"
+    tools:context=".SunFragment"
+    android:stretchColumns="*">
+
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:text="CzasSun"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/CzasMoon"
+            android:textAlignment="center"
+            android:layout_span="2"
+            android:textSize="48sp"
+            android:textStyle="bold"
+            android:textColor="@color/textSun"/>
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/longitudeMoon"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="long"
+            android:textAlignment="center"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@color/textSun"/>
+
+        <TextView
+            android:id="@+id/latitudeMoon"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="latotude"
+            android:textAlignment="center"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@color/textSun"/>
+
+    </TableRow>
+
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/dlugosc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Długość geograficzna"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            android:textColor="@color/textSun"/>
+
+        <TextView
+            android:id="@+id/szerokosc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Szczerokość geograficzna"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            android:textColor="@color/textSun"/>
+    </TableRow>
+
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/WschodMoon"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            android:textAlignment="center"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@color/textSun"/>
+
+        <TextView
+            android:id="@+id/ZachodMoon"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            android:textAlignment="center"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@color/textSun"/>
+
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Wchód"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            android:textColor="@color/textSun"/>
+
+        <TextView
+            android:id="@+id/textView17"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Zachód"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            android:textColor="@color/textSun"/>
+
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/nextNewMoon"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            android:textAlignment="center"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@color/textSun"/>
+
+        <TextView
+            android:text="nextFullMoon"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:id="@+id/nextFullMoon"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:textSize="24sp"
+            android:textColor="@color/textSun"/>
+
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/textView20"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Najbliższy nów"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            android:textColor="@color/textSun"/>
+
+        <TextView
+            android:text="Najbliższa pełnia"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textViewww"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            android:textColor="@color/textSun"/>
+
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/illumination"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            android:textAlignment="center"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@color/textSun"/>
+
+        <TextView
+            android:id="@+id/synodicDay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            android:textAlignment="center"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@color/textSun"/>
+
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/textView12"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Faza księżyca"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            android:textColor="@color/textSun"/>
+
+        <TextView
+            android:id="@+id/textView14"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Dzień miesiąca synodycznego"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            android:textColor="@color/textSun"/>
+
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </TableRow>
+</TableLayout>

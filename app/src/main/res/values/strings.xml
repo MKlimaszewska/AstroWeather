@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">AstroWeather</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="Wschód">Wschód</string>
+    <string name="Zachód">Zachód</string>
+    <string name="ZmierzchCyw">Zmierz cywilny</string>
+    <string name="ŚwitCyw">Wschód cywilny</string>
+    <string name="NajblizszyNow">Najbliższy nów</string>
+    <string name="NajblizszaPelnia">Najbliższa pełnia</string>
+    <string name="FazaKsiezyca">Faza księżyca</string>
+    <string name="DzienMiesiaca">Dzień miesiąca synodycznego</string>
+</resources>
