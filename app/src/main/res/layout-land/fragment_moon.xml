@@ -29,22 +29,22 @@
         android:layout_height="match_parent">
 
         <TextView
-            android:id="@+id/longitudeMoon"
+            android:id="@+id/Dlugosc"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text=""
+            android:text="@string/Długość_geograficzna"
             android:textAlignment="center"
-            android:textSize="24sp"
+            android:textSize="18sp"
             android:textStyle="bold"
             android:textColor="@color/textMoon"/>
 
         <TextView
-            android:id="@+id/latitudeMoon"
+            android:id="@+id/Szerokosc"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text=""
+            android:text="@string/Szerokość_geograficzna"
             android:textAlignment="center"
-            android:textSize="24sp"
+            android:textSize="18sp"
             android:textStyle="bold"
             android:textColor="@color/textMoon"/>
 
@@ -56,19 +56,19 @@
         android:layout_height="match_parent">
 
         <TextView
-            android:id="@+id/dlugosc"
+            android:id="@+id/textDlugosc"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Długość geograficzna"
+            android:text="@string/Długość_geograficzna"
             android:textAlignment="center"
             android:textSize="18sp"
             android:textColor="@color/textMoon"/>
 
         <TextView
-            android:id="@+id/szerokosc"
+            android:id="@+id/textSzerokosc"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Szczerokość geograficzna"
+            android:text="@string/Szerokość_geograficzna"
             android:textAlignment="center"
             android:textSize="18sp"
             android:textColor="@color/textMoon"/>
@@ -83,9 +83,9 @@
             android:id="@+id/WschodMoon"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="TextView"
+            android:text="@string/Wschód"
             android:textAlignment="center"
-            android:textSize="24sp"
+            android:textSize="18sp"
             android:textStyle="bold"
             android:textColor="@color/textMoon"/>
 
@@ -93,9 +93,9 @@
             android:id="@+id/ZachodMoon"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="TextView"
+            android:text="@string/Zachód"
             android:textAlignment="center"
-            android:textSize="24sp"
+            android:textSize="18sp"
             android:textStyle="bold"
             android:textColor="@color/textMoon"/>
 
@@ -106,19 +106,19 @@
         android:layout_height="match_parent">
 
         <TextView
-            android:id="@+id/textView8"
+            android:id="@+id/textWschodMoon"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Wchód"
+            android:text="@string/Wschód"
             android:textAlignment="center"
             android:textSize="18sp"
             android:textColor="@color/textMoon"/>
 
         <TextView
-            android:id="@+id/textView17"
+            android:id="@+id/textZachodMoon"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Zachód"
+            android:text="@string/Zachód"
             android:textAlignment="center"
             android:textSize="18sp"
             android:textColor="@color/textMoon"/>
@@ -130,44 +130,21 @@
         android:layout_height="match_parent">
 
         <TextView
-            android:id="@+id/nextNewMoon"
+            android:id="@+id/NajblizszyNowKsiezyca"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="TextView"
+            android:text="@string/NajblizszyNow"
             android:textAlignment="center"
-            android:textSize="24sp"
+            android:textSize="18sp"
             android:textStyle="bold"
             android:textColor="@color/textMoon"/>
 
         <TextView
-            android:text="nextFullMoon"
+            android:id="@+id/NajblizszaPelniaKsiezyca"
+            android:text="@string/NajblizszaPelnia"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" android:id="@+id/nextFullMoon"
+            android:layout_height="wrap_content"
             android:textStyle="bold"
-            android:textAlignment="center"
-            android:textSize="24sp"
-            android:textColor="@color/textMoon"/>
-
-    </TableRow>
-
-    <TableRow
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <TextView
-            android:id="@+id/textView20"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Najbliższy nów"
-            android:textAlignment="center"
-            android:textSize="18sp"
-            android:textColor="@color/textMoon"/>
-
-        <TextView
-            android:text="Najbliższa pełnia"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/textViewww"
             android:textAlignment="center"
             android:textSize="18sp"
             android:textColor="@color/textMoon"/>
@@ -179,47 +156,47 @@
         android:layout_height="match_parent">
 
         <TextView
-            android:id="@+id/illumination"
+            android:id="@+id/textNajblizszyNowKsiezyca"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="TextView"
+            android:text="@string/NajblizszyNow"
             android:textAlignment="center"
-            android:textSize="24sp"
-            android:textStyle="bold"
+            android:textSize="18sp"
             android:textColor="@color/textMoon"/>
 
         <TextView
-            android:id="@+id/synodicDay"
+            android:id="@+id/textNajblizszaPelniaKsiezyca"
+            android:textColor="@color/textMoon"
+            android:text="@string/NajblizszaPelnia"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="TextView"
             android:textAlignment="center"
-            android:textSize="24sp"
+            android:textSize="18sp" />
+
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/FazaKsiezyca"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/FazaKsiezyca"
+            android:textAlignment="center"
+            android:textSize="18sp"
             android:textStyle="bold"
             android:textColor="@color/textMoon"/>
 
-    </TableRow>
-
-    <TableRow
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
         <TextView
-            android:id="@+id/textView12"
+            android:id="@+id/DzienMiesiaca"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Faza księżyca"
+            android:text="@string/DzienMiesiaca"
             android:textAlignment="center"
             android:textSize="18sp"
-            android:textColor="@color/textMoon"/>
-
-        <TextView
-            android:id="@+id/textView14"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Dzień miesiąca synodycznego"
-            android:textAlignment="center"
-            android:textSize="18sp"
+            android:textStyle="bold"
             android:textColor="@color/textMoon"/>
 
     </TableRow>
@@ -228,5 +205,24 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+        <TextView
+            android:id="@+id/textFazaKsiezyca"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/FazaKsiezyca"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            android:textColor="@color/textMoon"/>
+
+        <TextView
+            android:id="@+id/textDzienMiesiaca"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/DzienMiesiaca"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            android:textColor="@color/textMoon"/>
+
     </TableRow>
+
 </TableLayout>
