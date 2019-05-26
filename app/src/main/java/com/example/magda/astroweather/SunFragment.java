@@ -15,6 +15,7 @@ import java.text.SimpleDateFormat;
 public class SunFragment extends Fragment {
     private View fragmentView;
     private TextView czasSun;
+    private TextView szerokość_geog,długość_geog,wschódSun,zachódSun,switCywilny,zachodCywilny;
 
     public SunFragment() {
     }
@@ -25,6 +26,13 @@ public class SunFragment extends Fragment {
                              Bundle savedInstanceState) {
         setRetainInstance(true);
         fragmentView = inflater.inflate(R.layout.fragment_sun, container, false);
+        szerokość_geog=fragmentView.findViewById(R.id.textSzerokosc);
+        długość_geog=fragmentView.findViewById(R.id.textDlugosc);
+        wschódSun=fragmentView.findViewById(R.id.textWschodSun);
+        zachódSun=fragmentView.findViewById(R.id.textZachodSun);
+        switCywilny=fragmentView.findViewById(R.id.textŚwitCyw);
+        zachodCywilny=fragmentView.findViewById(R.id.textZmierzchCyw);
+
         RefreashTime();
         return fragmentView;
     }

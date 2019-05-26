@@ -13,9 +13,9 @@ public class MainActivity extends AppCompatActivity {
     private SectionsPagerAdapter sectionsPagerAdapter;
     private ViewPager viewPager;
 
-    public String czestotliwosc;
-    public String dlugos;
-    public String szerokosc;
+    public static String czestotliwosc="25";
+    public static String dlugosc="43";
+    public static String szerokosc="54";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -77,5 +77,6 @@ public class MainActivity extends AppCompatActivity {
             return 2;
         }
     }
+
 
 }

@@ -14,23 +14,27 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-
 public class MoonFragment extends Fragment {
     private View fragmentView;
     private TextView czasMoon;
-
-    public MoonFragment() {
-
-    }
+    private TextView szerokość_geog,długość_geog,wschódMoon,zachódMoon,faza,nastepnyNów,następnaPełnia,dzieńMiesiąca;
 
 
-    @Override
+        @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        setRetainInstance(true);
-       fragmentView = inflater.inflate(R.layout.fragment_moon, container, false);
-    RefreashTime();
-        return fragmentView;
+            setRetainInstance(true);
+            fragmentView = inflater.inflate(R.layout.fragment_moon, container, false);
+            szerokość_geog=fragmentView.findViewById(R.id.textSzerokosc);
+            długość_geog=fragmentView.findViewById(R.id.textDlugosc);
+            wschódMoon=fragmentView.findViewById(R.id.textWschodMoon);
+            zachódMoon=fragmentView.findViewById(R.id.textZachodMoon);
+            faza=fragmentView.findViewById(R.id.textFazaKsiezyca);
+            nastepnyNów=fragmentView.findViewById(R.id.textNajblizszyNowKsiezyca);
+            następnaPełnia=fragmentView.findViewById(R.id.textNajblizszaPelniaKsiezyca);
+            dzieńMiesiąca=fragmentView.findViewById(R.id.textDzienMiesiaca);
+          RefreashTime();
+          return fragmentView;
     }
 
     public void RefreashTime(){
@@ -58,6 +62,7 @@ public class MoonFragment extends Fragment {
         t.start();
 
     }
+
 
 
 }
