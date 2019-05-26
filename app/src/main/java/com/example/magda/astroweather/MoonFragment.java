@@ -48,7 +48,6 @@ public class MoonFragment extends Fragment {
                                 String dateString = sdf.format(date);
                                 czasMoon = fragmentView.findViewById(R.id.CzasMoon);
                                 czasMoon.setText(dateString);
-                                Log.i("Wyświetla czas",dateString);
                             }
                         });
                     }

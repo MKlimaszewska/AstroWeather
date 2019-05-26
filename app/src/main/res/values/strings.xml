@@ -11,4 +11,6 @@
     <string name="DzienMiesiaca">Dzień miesiąca synodycznego</string>
     <string name="Długość_geograficzna">Długość geograficzna</string>
     <string name="Szerokość_geograficzna">Szerokość geograficzna</string>
+    <string name="Częstotliwość">Częstotliwość odświeżania</string>
+    <string name="CzęstotliwośćMin">Częstotliwość odświeżania w minutach</string>
 </resources>

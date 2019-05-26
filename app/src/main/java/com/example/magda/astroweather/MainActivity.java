@@ -10,18 +10,23 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 public class MainActivity extends AppCompatActivity {
-    private SectionsPagerAdapter mSectionsPagerAdapter;
-    private ViewPager mViewPager;
+    private SectionsPagerAdapter sectionsPagerAdapter;
+    private ViewPager viewPager;
+
+    public String czestotliwosc;
+    public String dlugos;
+    public String szerokosc;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Boolean isTablet = getResources().getBoolean(R.bool.isTablet);
 
-        if(!isTablet){
-            mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager());
-            mViewPager = (ViewPager) findViewById(R.id.pager);
-            mViewPager.setAdapter(mSectionsPagerAdapter);
+        if(!isTablet) {
+            sectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager());
+            viewPager = (ViewPager) findViewById(R.id.pager);
+            viewPager.setAdapter(sectionsPagerAdapter);
                     }
     }
 
@@ -34,14 +39,20 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
-            case R.id.item1:
-                return true;
-            case R.id.item2:
+            case R.id.menu:
+                openSettings();
                 return true;
         }
 
         return super.onOptionsItemSelected(item);
     }
+
+    private void openSettings() {
+       Settings refreshTimeDialog = new Settings();
+        refreshTimeDialog.show(getSupportFragmentManager(),"refreshTimeDialog");
+    }
+
+
     public class SectionsPagerAdapter extends FragmentPagerAdapter {
 
         public SectionsPagerAdapter(FragmentManager fm) {

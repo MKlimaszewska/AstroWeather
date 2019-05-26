@@ -44,7 +44,7 @@ public class SunFragment extends Fragment {
                                 String dateString = sdf.format(date);
                                 czasSun = fragmentView.findViewById(R.id.CzasSun);
                                 czasSun.setText(dateString);
-                                Log.i("Wyświetla czas",dateString);
+
                             }
                         });
                     }
