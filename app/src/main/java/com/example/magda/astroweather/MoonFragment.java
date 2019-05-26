@@ -29,10 +29,35 @@ public class MoonFragment extends Fragment {
                              Bundle savedInstanceState) {
         setRetainInstance(true);
        fragmentView = inflater.inflate(R.layout.fragment_moon, container, false);
-        String currentDateTimeString = DateFormat.getDateTimeInstance().format(new Date());
-        czasMoon = fragmentView.findViewById(R.id.CzasMoon);
-        czasMoon.setText(currentDateTimeString);
+    RefreashTime();
         return fragmentView;
+    }
+
+    public void RefreashTime(){
+        Thread t = new Thread() {
+            @Override
+            public void run() {
+                try {
+                    while (!isInterrupted()) {
+                        Thread.sleep(1000);
+                        MoonFragment.this.getActivity().runOnUiThread(new Runnable() {
+                            @Override
+                            public void run() {
+                                long date = System.currentTimeMillis();
+                                SimpleDateFormat sdf = new SimpleDateFormat("HH:mm:ss");
+                                String dateString = sdf.format(date);
+                                czasMoon = fragmentView.findViewById(R.id.CzasMoon);
+                                czasMoon.setText(dateString);
+                                Log.i("Wyświetla czas",dateString);
+                            }
+                        });
+                    }
+                } catch (InterruptedException e) {
+                }
+            }
+        };
+        t.start();
+
     }
 
 
