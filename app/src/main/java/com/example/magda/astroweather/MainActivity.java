@@ -9,25 +9,30 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.astrocalculator.AstroDateTime;
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Locale;
+
 public class MainActivity extends AppCompatActivity {
     private SectionsPagerAdapter sectionsPagerAdapter;
     private ViewPager viewPager;
 
-    public static String czestotliwosc="25";
-    public static String dlugosc="43";
-    public static String szerokosc="54";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Boolean isTablet = getResources().getBoolean(R.bool.isTablet);
+        InitialDate();
 
         if(!isTablet) {
             sectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager());
             viewPager = (ViewPager) findViewById(R.id.pager);
             viewPager.setAdapter(sectionsPagerAdapter);
                     }
+
     }
 
     @Override
@@ -51,6 +56,17 @@ public class MainActivity extends AppCompatActivity {
        Settings refreshTimeDialog = new Settings();
         refreshTimeDialog.show(getSupportFragmentManager(),"refreshTimeDialog");
     }
+
+
+    private void InitialDate() {
+        AstroDateTimeClass.setYear(Integer.parseInt(new SimpleDateFormat("yyyy", Locale.US).format(new Date())));
+        AstroDateTimeClass.setMonth(Integer.parseInt(new SimpleDateFormat("MM", Locale.US).format(new Date())));
+        AstroDateTimeClass.setDay(Integer.parseInt(new SimpleDateFormat("dd", Locale.US).format(new Date())));
+        AstroDateTimeClass.setHour(Integer.parseInt(new SimpleDateFormat("HH", Locale.US).format(new Date())));
+        AstroDateTimeClass.setMinute(Integer.parseInt(new SimpleDateFormat("mm", Locale.US).format(new Date())));
+        AstroDateTimeClass.setSecond(Integer.parseInt(new SimpleDateFormat("ss", Locale.US).format(new Date())));
+    }
+
 
 
     public class SectionsPagerAdapter extends FragmentPagerAdapter {
