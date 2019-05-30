@@ -12,5 +12,7 @@
     <string name="Długość_geograficzna">Długość geograficzna</string>
     <string name="Szerokość_geograficzna">Szerokość geograficzna</string>
     <string name="Częstotliwość">Częstotliwość odświeżania</string>
-    <string name="CzęstotliwośćMin">Częstotliwość odświeżania w minutach</string>
+    <string name="CzęstotliwośćMin">Częstotliwość odświeżania(sekundy)</string>
+    <string name="AzymutWschod">Wschód azymut</string>
+    <string name="AzymutZachod">Zachód azymut</string>
 </resources>

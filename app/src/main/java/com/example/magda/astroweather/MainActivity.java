@@ -67,8 +67,6 @@ public class MainActivity extends AppCompatActivity {
         AstroDateTimeClass.setSecond(Integer.parseInt(new SimpleDateFormat("ss", Locale.US).format(new Date())));
     }
 
-
-
     public class SectionsPagerAdapter extends FragmentPagerAdapter {
 
         public SectionsPagerAdapter(FragmentManager fm) {

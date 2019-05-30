@@ -10,6 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.astrocalculator.AstroCalculator;
 import com.astrocalculator.AstroDateTime;
@@ -27,7 +28,8 @@ public class MoonFragment extends Fragment {
     private TextView szerokość_geog,długość_geog,wschódMoon,zachódMoon,faza,nastepnyNów,następnaPełnia,dzieńMiesiąca;
     private AstroCalculatorClass astroCalculatorClass;
 
-    private int refreshTime=5;
+    private int refreshTime=10000;
+    private  Handler someHandler = new Handler();
 
         @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -48,40 +50,32 @@ public class MoonFragment extends Fragment {
           return fragmentView;
     }
 
+public void InitData(){
+    mToastRunnable.run();
+}
 
-    public void InitData() {
-        szerokość_geog.setText(AstroLocalizationClass.getLatitude().toString());
-        długość_geog.setText(AstroLocalizationClass.getLongitude().toString());
-        final Handler someHandler = new Handler(getMainLooper());
-        someHandler.postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                someHandler.postDelayed(this, 10);
-                szerokość_geog.setText(AstroLocalizationClass.getLatitude().toString());
-                długość_geog.setText(AstroLocalizationClass.getLongitude().toString());
-                astroCalculatorClass.setLocation(AstroLocalizationClass.location);
-                wschódMoon.setText(astroCalculatorClass.getMoonrise().toString());
-                zachódMoon.setText(astroCalculatorClass.getMoonset().toString());
-                następnaPełnia.setText(astroCalculatorClass.getNextFullMoon().toString());
-                nastepnyNów.setText(astroCalculatorClass.getNextNewMoon().toString());
-                faza.setText(Double.toString(astroCalculatorClass.getIlumination()));
-                dzieńMiesiąca.setText(Double.toString(astroCalculatorClass.getAge()));
+    private Runnable mToastRunnable= new Runnable() {
 
+                    @Override
+                    public void run() {
+                        InitialDate();
+                        refreshTime=AstroLocalizationClass.getRefreshTime();
+                        Log.i("refreshTime",String.valueOf(refreshTime));
+                        szerokość_geog.setText(AstroLocalizationClass.getLatitude().toString());
+                        długość_geog.setText(AstroLocalizationClass.getLongitude().toString());
+                        astroCalculatorClass.setLocation(AstroLocalizationClass.location);
+                        wschódMoon.setText(astroCalculatorClass.getMoonrise().toString());
+                        zachódMoon.setText(astroCalculatorClass.getMoonset().toString());
+                        następnaPełnia.setText(astroCalculatorClass.getNextFullMoon().toString());
+                        nastepnyNów.setText(astroCalculatorClass.getNextNewMoon().toString());
+                        Log.i("refres",astroCalculatorClass.getIlumination().toString());
+                        faza.setText(Double.toString(astroCalculatorClass.getIlumination()));
+                        dzieńMiesiąca.setText(Double.toString(astroCalculatorClass.getAge()));
+                        someHandler.postDelayed(mToastRunnable,refreshTime*1000);
 
-            }
-        }, 10);
+                };
+    };
 
-
-        someHandler.postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                someHandler.postDelayed(this, 60000 * refreshTime);
-                astroCalculatorClass.setDateTime(AstroDateTimeClass.astroDateTime);
-
-            }
-        }, 10);
-
-    }
 
     public void RefreashTime(){
         Thread t = new Thread() {
@@ -90,17 +84,22 @@ public class MoonFragment extends Fragment {
                 try {
                     while (!isInterrupted()) {
                         Thread.sleep(1000);
-                        MoonFragment.super.getActivity().runOnUiThread(new Runnable() {
-                            @Override
-                            public void run() {
-                                long date = System.currentTimeMillis();
-                                SimpleDateFormat sdf = new SimpleDateFormat("HH:mm:ss");
-                                String dateString = sdf.format(date);
-                                czasMoon = fragmentView.findViewById(R.id.CzasMoon);
-                                czasMoon.setText(dateString);
+                        if(MoonFragment.super.getActivity()!= null){
+                            MoonFragment.super.getActivity().runOnUiThread(new Runnable() {
+                                @Override
+                                public void run() {
+                                    long date = System.currentTimeMillis();
+                                    SimpleDateFormat sdf = new SimpleDateFormat("HH:mm:ss");
+                                    String dateString = sdf.format(date);
+                                    czasMoon = fragmentView.findViewById(R.id.CzasMoon);
+                                    if (czasMoon!=null)
+                                        czasMoon.setText(dateString);
+                                    refreshTime= AstroLocalizationClass.getRefreshTime();
+                                }
+                            });
                             }
-                        });
-                    }
+                        }
+
                 } catch (InterruptedException e) {
                 }
             }
@@ -108,6 +107,15 @@ public class MoonFragment extends Fragment {
         t.start();
 
     }
+    private void InitialDate() {
+        AstroDateTimeClass.setYear(Integer.parseInt(new SimpleDateFormat("yyyy", Locale.US).format(new Date())));
+        AstroDateTimeClass.setMonth(Integer.parseInt(new SimpleDateFormat("MM", Locale.US).format(new Date())));
+        AstroDateTimeClass.setDay(Integer.parseInt(new SimpleDateFormat("dd", Locale.US).format(new Date())));
+        AstroDateTimeClass.setHour(Integer.parseInt(new SimpleDateFormat("HH", Locale.US).format(new Date())));
+        AstroDateTimeClass.setMinute(Integer.parseInt(new SimpleDateFormat("mm", Locale.US).format(new Date())));
+        AstroDateTimeClass.setSecond(Integer.parseInt(new SimpleDateFormat("ss", Locale.US).format(new Date())));
+    }
+
 
 
 

@@ -6,7 +6,7 @@ import com.astrocalculator.AstroCalculator;
 public class AstroLocalizationClass {
 
     public static AstroCalculator.Location location= new AstroCalculator.Location(12,35);
-    private static int refreshTime;
+    public static int refreshTime=5;
     public static Double getLatitude(){
         return location.getLatitude();
     }

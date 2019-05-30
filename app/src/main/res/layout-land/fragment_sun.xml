@@ -130,6 +130,56 @@
         android:layout_height="match_parent">
 
         <TextView
+            android:id="@+id/AzymutWschod"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/AzymutWschod"
+            android:textAlignment="center"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@color/textSun"/>
+
+        <TextView
+            android:id="@+id/AzymutZachod"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/AzymutZachod"
+            android:textAlignment="center"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@color/textSun"/>
+
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/textAzymutWschod"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/AzymutWschod"
+            android:textAlignment="center"
+            android:textSize="24sp"
+            android:textColor="@color/textSun"/>
+
+        <TextView
+            android:id="@+id/textAzyymutZachod"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/AzymutZachod"
+            android:textAlignment="center"
+            android:textSize="24sp"
+            android:textColor="@color/textSun"/>
+
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
             android:id="@+id/ZmierzchCyw"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

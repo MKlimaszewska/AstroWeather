@@ -20,7 +20,7 @@ public class Settings extends AppCompatDialogFragment {
     public EditText dlugoscValue;
     public EditText szerokoscValue;
     public View view;
-
+    public static boolean DataChanged=false;
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
@@ -49,7 +49,10 @@ public class Settings extends AppCompatDialogFragment {
                         }else{
                             AstroLocalizationClass.setLatitude(Double.parseDouble(szerokosc));
                             AstroLocalizationClass.setLongitude(Double.parseDouble(dlugosc));
-                            AstroLocalizationClass.setRefreshTime(Integer.parseInt(dlugosc));
+                            AstroLocalizationClass.setRefreshTime(Integer.parseInt(czestotliwosc));
+                            Log.i("czestotliwosc",czestotliwosc);
+                            AstroLocalizationClass.setRefreshTime(Integer.valueOf(czestotliwosc));
+                            DataChanged=true;
                         }
 
                     }
